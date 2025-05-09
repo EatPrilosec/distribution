@@ -1,6 +1,21 @@
 name: Build device
 
 on:
+  workflow_call:
+    inputs:
+      PROJECT:
+        description: "The project name"
+        type: string
+        required: true
+      DEVICE:
+        description: "The device name"
+        type: string
+        required: true
+      OWNER_LC:
+        description: "repo owner name"
+        type: string
+        required: true
+
   workflow_dispatch:
     inputs:
       PROJECT:
